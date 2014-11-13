@@ -11,9 +11,10 @@ class Gain
 			instance_variable_set("@#{k}", v) unless v.nil?
 		end
 
-		@progress_print = 1.0 if @progress_print == nil
+		@@progress_count = 0
+		@progress_print = 1 if @progress_print == nil
 		@@progress_mod = @total * @progress_print.to_f / 100.0
-		@@round = @progress_print.to_s.split(".")[1].length
+		@progress_print.to_s.include?(".") ? @@round = @progress_print.to_s.split(".")[1].length : @@round = 0
 
 		puts @title if @title != nil
 	end
