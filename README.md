@@ -42,7 +42,7 @@ end
 ...
 ...
 > 100%
-> Complete processed
+> Complete progress
 ```
 
 ## Contributing

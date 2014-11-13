@@ -13,7 +13,7 @@ class Gain
 
 		@@progress_count = 0
 		@progress_print = 1 if @progress_print == nil
-		@@progress_mod = @total * @progress_print.to_f / 100.0
+		@@progress_mod = (@total * @progress_print.to_f / 100.0).to_i
 		@progress_print.to_s.include?(".") ? @@round = @progress_print.to_s.split(".")[1].length : @@round = 0
 
 		puts @title if @title != nil
@@ -27,6 +27,6 @@ class Gain
 	end
 
 	def finish_progress
-		puts "Complete processed"
+		puts "Complete progress"
 	end
 end
