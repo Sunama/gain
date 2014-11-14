@@ -24,4 +24,12 @@ describe Gain do
 			gain.progress
 		end
 	end
+
+	it "test with 47 total progress" do
+		gain = Gain.new :title => "Start 47 Progress", :total => 47, :progress_print => 0.1
+
+		for i in 1..47 do
+			gain.progress
+		end
+	end
 end
